@@ -30,7 +30,8 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'category.name', title: __('Category.name')},
                         {field: 'clicks', title: __('Clicks')},
                         {field: 'dclicks', title: __('Dclicks')},
-                        {field: 'url', title: __('Url'), formatter: Table.api.formatter.url},
+                        {field: 'android', title: __('Android'), formatter: Table.api.formatter.url},
+                        {field: 'ios', title: __('Ios'), formatter: Table.api.formatter.url},
                         {field: 'status', title: __('Status'), formatter: Table.api.formatter.status},
                         {field: 'app_order', title: __('App_order'), operate: 'BETWEEN'},
                         {
@@ -66,7 +67,6 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             },
             formatter: {
                 thumb: function (value, row, index) {
-                    console.log(row);
                     var html = '<a href="' + row.logo + '" target="_blank"><img src="' + row.logo + '" alt="" style="max-height:60px;max-width:120px"></a>';
                     // if (row.mimetype.indexOf("image") > -1) {
                     //     html = '<a href="' + row.fullurl + '" target="_blank"><img src="' + row.fullurl + row.thumb_style + '" alt="" style="max-height:60px;max-width:120px"></a>';
@@ -74,9 +74,6 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     //     html = '<a href="' + row.fullurl + '" target="_blank"><img src="' + Fast.api.fixurl("ajax/icon") + "?suffix=" + row.imagetype + '" alt="" style="max-height:90px;max-width:120px"></a>';
                     // }
                     return '<div style="width:120px;margin:0 auto;text-align:center;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;">' + html + '</div>';
-                },
-                url: function (value, row, index) {
-                    return '<a href="' + row.fullurl + '" target="_blank" class="label bg-green">' + row.url + '</a>';
                 },
                 filename: function (value, row, index) {
                     return '<div style="width:150px;margin:0 auto;text-align:center;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;">' + Table.api.formatter.search.call(this, value, row, index) + '</div>';
