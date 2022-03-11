@@ -1,5 +1,5 @@
 # 基础说明
-本程序是基于yfcmf-tp6开发的，地址：https://github.com/0377/yfcmf-tp6。可以使用yfcmf-tp6的插件
+easycms是一套可以用做导航站或者下载站的cms。本程序是基于yfcmf-tp6开发的，地址：https://github.com/0377/yfcmf-tp6。可以使用yfcmf-tp6的插件
 
 # 程序安装
 - 环境要求：php版本>=7.0
@@ -31,5 +31,6 @@ config/app.php文件第22行，将yfcmf改成你自己的后台地址
 - 应用标签：nav:apps
 - 应用分页标签：nav:pagedapps
 
-
+# 联系我们
+飞机群：https://t.me/easy_cms
 
